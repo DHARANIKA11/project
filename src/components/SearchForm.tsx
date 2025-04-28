@@ -77,6 +77,9 @@ const SearchForm = ({ onSearch, isLoading }: SearchFormProps) => {
               onSelect={setDateOfBirth}
               initialFocus
               disabled={(date) => date > new Date()}
+              captionLayout="dropdown-buttons"
+              fromYear={1990}
+              toYear={new Date().getFullYear()}
             />
           </PopoverContent>
         </Popover>
