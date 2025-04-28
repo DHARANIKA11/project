@@ -3,6 +3,7 @@ import React from 'react';
 import ResultCard from '@/components/ResultCard';
 import { useLocation, Navigate } from 'react-router-dom';
 import { StudentResult } from '@/data/studentResults';
+import { Pen, Pencil, Eraser } from 'lucide-react';
 
 const Results = () => {
   const location = useLocation();
@@ -16,6 +17,11 @@ const Results = () => {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-education-700 text-white py-6 shadow-md">
         <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <Pen className="w-6 h-6 text-education-100" />
+            <Pencil className="w-6 h-6 text-education-100" />
+            <Eraser className="w-6 h-6 text-education-100" />
+          </div>
           <h1 className="text-2xl md:text-3xl font-bold text-center">
             Examination Results
           </h1>
