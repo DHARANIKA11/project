@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { StudentResult } from "@/data/studentResults";
@@ -13,6 +12,7 @@ import {
   TableRow 
 } from "@/components/ui/table";
 import { Progress } from "@/components/ui/progress";
+import { cn } from "@/lib/utils";
 
 interface ResultCardProps {
   result: StudentResult;
@@ -50,12 +50,12 @@ const ResultCard = ({ result }: ResultCardProps) => {
           </div>
           <Progress 
             value={result.percentage} 
-            className="h-2" 
-            indicatorClassName={
+            className={cn(
+              "h-2",
               result.passStatus 
                 ? "bg-gradient-to-r from-education-400 to-education-600" 
                 : "bg-red-500"
-            }
+            )}
           />
           <div className="flex justify-between items-center mt-2">
             <div className="text-sm text-gray-500">
